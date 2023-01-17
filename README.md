@@ -212,8 +212,10 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
     - В панели управления Teamcity Server / Projects / Netology / Build / Edit configuration / General settings
     - Укажем в Artifact paths: `target/*.jar => target`
 - Запустим сборку проекта в Teamcity
-- Проверим наличие артефактов
+- Проверим сборку наличие артефактов
+    - Teamcity
+        ![](devops-9.5.6.JPG)
     - Nexus
-        ![](devops-9.5.5.png)
+        ![](devops-9.5.5.JPG)
 
 [Форк репозитория example-teamcity](https://github.com/VovetZ/example-teamcity)
