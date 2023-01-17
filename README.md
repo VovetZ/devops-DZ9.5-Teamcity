@@ -200,4 +200,20 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
             assertThat(welcomer.sayNewText(), containsString("text"));
         }
         ```
+- Проверим что Teamcity провёл тесты
+    - В панели управления Teamcity Server / Projects / netology / Build 
+        ![](devops-9.5.4.JPG)
+- Изменим версию приложения в новой ветке форка репозитория в `pom.xml`
+       ```xml
+        <version>0.0.99</version>
+        ```
+- Создадим запрос на внедрение изменений в ветку master в репозитории
+- Настроим конфигурацию сборки в Teamcity
+    - В панели управления Teamcity Server / Projects / Netology / Build / Edit configuration / General settings
+    - Укажем в Artifact paths: `target/*.jar => target`
+- Запустим сборку проекта в Teamcity
+- Проверим наличие артефактов
+    - Nexus
+        ![](devops-9.5.5.png)
 
+[Форк репозитория example-teamcity](https://github.com/VovetZ/example-teamcity)
