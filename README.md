@@ -147,3 +147,22 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
         - Token: публичный ключ
     - После завершения сканирования репозитория выберем Build step: `Maven`
     - Save
+- В форке репозитория изменим адрес nexus
+    - Отредактируем файл [pom.xml](pom.xml)
+        ```
+        <url>http://158.160.50.246:8081/repository/maven-releases</url>
+        ```
+- Проверим сборку в Teamcity
+    - В Teamcity Server в настройках проекта Go to build configuration
+    - Run
+    ![](devops-9.5.1.JPG)
+- Изменим настройки сборок в 
+    - В панели управления Teamcity Server / Projects / Netology / Build / Edit configuration / Build Steps
+    - Сделаем два шага со следующими условиями
+    - Edit / Add condition
+        - teamcity.build.branch equals master
+            - Goals: clean deploy
+        - teamcity.build.branch does not equal master
+            - Goals: clean test
+
+    ![](devops-9.5.2.JPG)
