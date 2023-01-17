@@ -48,13 +48,12 @@
     - nexus: 158.160.50.246
 - Пропишем в файле `infrastructure/inventory/cicd/hosts.yml` адрес машины nexus и пользователя ansible
     ```
-    ansible_host: 158.160.50.246
+    ansible_host: 158.160.47.237
     ansible_user: vk77
     ``` 
 - Запустим проигрывание в Ansible  
     - `ansible-playbook -i inventory/cicd/hosts.yml site.yml`
-
-    ```bash
+```bash
     root@vkvm:/home/vk/netology/mnt-homeworks/09-ci-05-teamcity/infrastructure# 
 [WARNING]: You are running the development version of Ansible. You should only run Ansible from "devel" if you are modifying the Ansible engine, or trying out features under development. This is a rapidly changing source of
 code and can become unstable at any point.
