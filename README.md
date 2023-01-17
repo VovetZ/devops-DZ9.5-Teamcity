@@ -138,5 +138,12 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
     - Создаем проект Create project / Manually , Name: Netology 
     - В панели Teamcity Server выберем Agents / Unauthorized выберем агента nexus-agent и нажмём Authorize
 - Создадим форк репозитория [example-teamcity](https://github.com/aragastmatb/example-teamcity)
-    - Выберем Create a new fork
     - [Адрес форка](https://github.com/VovetZ/example-teamcity)
+- Создадим конфигурацию build в Teamcity
+    - В панели управления Teamcity Server выберем созданный проект Netology
+    - В настройках проекта выберем New build configuration / From repository
+        - Repository URL: `https://github.com/VovetZ/example-teamcity`
+        - Username: `VovetZ`
+        - Token: публичный ключ
+    - После завершения сканирования репозитория выберем Build step: `Maven`
+    - Save
