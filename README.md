@@ -180,6 +180,24 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
 - Сохраним настройки проекта Teamcity в репозитории
     - Идем в Teamcity Server / Projects / Netology / Edit Project / Versioned Settings
     - Synchronization enabled
-- Создадим ветку feature/add_reply в форке репозитория
-- 
+- Создадим ветку add_reply в форке репозитория
+- - Создадим ветку add_reply в форке репозитория
+- Сделаем изменения в новой ветке
+    - src/main/java/plaindoll/HelloPlayer.java
+        ```java
+            System.out.println(welcomer.sayNewText());
+        ```
+    - src/main/java/plaindoll/Welcomer.java
+        ```java
+        public String sayNewText(){
+            return "This is a new text in branch, hunter.";
+        }
+        ```
+    - src/test/java/plaindoll/WelcomerTest.java
+        ```java
+        @Test
+        public void welcomerSaysNewText(){
+            assertThat(welcomer.sayNewText(), containsString("text"));
+        }
+        ```
 
