@@ -174,12 +174,12 @@ nexus-01                   : ok=17   changed=15   unreachable=0    failed=0    s
     - В User settings selection выберем settings.xml
 - Запустим новую сборку в Teamcity
     - Teamcity Server / Projects / netology / Build / Run
-    - После окончания сборки проверим загрузку артефактов в Nexus
+    - После окончания сборки проверим артефакты в Nexus
         - В панели управления Nexus зайдём в Browse / maven-releases
             ![](devops-9.5.3.JPG)
-- Сохраним настройки проекта Teamcity в репозитории GitHub
+- Сохраним настройки проекта Teamcity в репозитории
     - Идем в Teamcity Server / Projects / Netology / Edit Project / Versioned Settings
     - Synchronization enabled
-
 - Создадим ветку feature/add_reply в форке репозитория
+- 
 
